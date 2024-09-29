@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS hospital;
+
+CREATE TABLE IF NOT EXISTS hospital (
+    "serial number" SERIAL PRIMARY KEY,
+    "B" VARCHAR(5) NOT NULL,
+	"C" VARCHAR(30) NOT NULL UNIQUE,
+	"D" VARCHAR(15),
+	"E" VARCHAR(7),
+	"F" VARCHAR(7),
+	"G" VARCHAR(50)
+    );
