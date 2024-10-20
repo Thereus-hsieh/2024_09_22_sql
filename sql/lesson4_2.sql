@@ -32,7 +32,10 @@ SELECT date AS 日期,
 	   stationname AS 站名,
 	   stationaddrtw AS 站址,
 	   stationtel AS 電話
-FROM station_in_out in_out JOIN stations s ON in_out.stacode = s.stationcode
-WHERE stationname = '基隆';
+
+
+
+
+
 
 
