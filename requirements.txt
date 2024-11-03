@@ -4,3 +4,4 @@ pandas-datareader
 Pyarrow
 yfinance
 streamlit
+python-dotenv
