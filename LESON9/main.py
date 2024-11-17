@@ -1,18 +1,21 @@
 
+
 from dotenv import load_dotenv
 import streamlit as st
-from time import sleep
-from LESON9.tools import get_data
+from pprint import pprint
+import tools
 load_dotenv()
 
 
-
-@st.dialog("error 目前發生問題,請稍後再試")
+@st.dialog("目前發生問題,請稍後再試")
 def alert():
         st.write('連線有問題')
         st.stop()
 
 with st.spinner('下載資料中...'):
-        get_data()
-alert()
-st.write('顯示頁面')
+        youbikes:list[dict] = tools.get_data()
+        tools.save_to_database(data=youbikes)
+        
+if youbikes is None:
+    alert()
+st.write(youbikes)
